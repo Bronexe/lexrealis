@@ -173,21 +173,21 @@ export default function HomePage() {
                   <Scale className="h-6 w-6 text-[#BF7F11]" />
                 </div>
                 <CardTitle className="text-xl">Especialización</CardTitle>
-                <CardDescription>15+ años especializados exclusivamente en derecho inmobiliario</CardDescription>
+                <CardDescription>Dedicados al derecho inmobiliario y a la administración</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-sm">
                     <CheckCircle className="h-4 w-4 text-[#BF7F11]" />
-                    500+ edificios asesorados
+                    Edificios, condominios y lotes asesorados
                   </li>
                   <li className="flex items-center gap-2 text-sm">
                     <CheckCircle className="h-4 w-4 text-[#BF7F11]" />
-                    95% de éxito en cobranzas
+                    Gestión de Activos
                   </li>
                   <li className="flex items-center gap-2 text-sm">
                     <CheckCircle className="h-4 w-4 text-[#BF7F11]" />
-                    $5.2M recuperado para clientes
+                    Recuperación de patrimonios y comisiones
                   </li>
                 </ul>
               </CardContent>

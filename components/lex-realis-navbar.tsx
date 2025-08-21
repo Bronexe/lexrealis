@@ -87,12 +87,18 @@ function Navbar({ className }: { className?: string }) {
                       >
                         Corredores e Inmobiliarias
                       </Link>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <h3 className="font-semibold text-sm text-muted-foreground uppercase tracking-wide">Blog</h3>
+                    <div className="space-y-1">
                       <Link 
                         href="/blog" 
                         className="block py-2 px-3 rounded-lg hover:bg-muted transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Blog
+                        Artículos y Recursos
                       </Link>
                     </div>
                   </div>
@@ -132,8 +138,11 @@ function Navbar({ className }: { className?: string }) {
         </div>
       ) : (
         // Desktop Navbar
-        <Menu setActive={setActive}>
-          <Link href="/" className="flex items-center space-x-2 mr-8">
+        <nav 
+          onMouseLeave={() => setActive(null)}
+          className="relative rounded-full border border-transparent dark:bg-black/80 dark:border-white/[0.2] bg-white/80 backdrop-blur-sm shadow-input flex items-center justify-between px-8 py-6"
+        >
+          <Link href="/" className="flex items-center">
             <img 
               src="/Logo-Lex-Realis.png" 
               alt="LexRealis Abogados" 
@@ -141,30 +150,33 @@ function Navbar({ className }: { className?: string }) {
             />
           </Link>
 
-          <MenuItem setActive={setActive} active={active} item="Servicios">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/administradores">Administradores</HoveredLink>
-              <HoveredLink href="/corredores-inmobiliarias">Corredores e Inmobiliarias</HoveredLink>
-              <HoveredLink href="/blog">Blog</HoveredLink>
-            </div>
-          </MenuItem>
+          <div className="flex items-center space-x-8">
+            <MenuItem setActive={setActive} active={active} item="Servicios">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/administradores">Administradores</HoveredLink>
+                <HoveredLink href="/corredores-inmobiliarias">Corredores e Inmobiliarias</HoveredLink>
+              </div>
+            </MenuItem>
 
-          <MenuItem setActive={setActive} active={active} item="Empresa">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/nosotros">Nosotros</HoveredLink>
-              <HoveredLink href="/contacto">Contacto</HoveredLink>
-            </div>
-          </MenuItem>
+            <MenuItem setActive={setActive} active={active} item="Empresa">
+              <div className="flex flex-col space-y-4 text-sm">
+                <HoveredLink href="/nosotros">Nosotros</HoveredLink>
+                <HoveredLink href="/contacto">Contacto</HoveredLink>
+              </div>
+            </MenuItem>
 
-          <div className="ml-8">
-            <Button asChild className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
-              <Link href="/agendar">
-                <Phone className="h-4 w-4 mr-2" />
-                Cotiza Aquí
-              </Link>
-            </Button>
+            <Link href="/blog" className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white">
+              Blog
+            </Link>
           </div>
-        </Menu>
+
+          <Button asChild className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
+            <Link href="/agendar">
+              <Phone className="h-4 w-4 mr-2" />
+              Cotiza Aquí
+            </Link>
+          </Button>
+        </nav>
       )}
     </div>
   );

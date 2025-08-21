@@ -32,7 +32,7 @@ export default function BlogPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#BF7F11]/5 to-transparent">
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-[#BF7F11]/5 to-transparent">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <Badge variant="outline" className="w-fit mx-auto">
