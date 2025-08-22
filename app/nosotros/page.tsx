@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { AnimatedTeam } from "@/components/ui/animated-team"
 import { AutoCarousel } from "@/components/ui/auto-carousel"
+import StickyScrollRevealDemo from "@/components/ui/sticky-scroll-reveal-demo"
 import {
   Scale,
   Award,
@@ -192,24 +193,7 @@ export default function NosotrosPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {process.map((step, index) => (
-              <Card key={index} className="relative border-2 hover:border-primary/20 transition-colors">
-                <div className="absolute -top-4 left-6 bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold">
-                  {step.step}
-                </div>
-                <CardHeader className="pt-8">
-                  <div className="mb-4 p-3 bg-primary/10 rounded-lg w-fit">
-                    <step.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{step.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <StickyScrollRevealDemo />
         </div>
       </section>
 
