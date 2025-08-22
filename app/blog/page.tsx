@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { FileText, Clock, User, Search, Filter, ArrowRight, Download, BookOpen } from "lucide-react"
 import { getBlogPosts, getAllCategories, getAllTags } from "@/lib/mdx"
+import BlogCards from "@/components/ui/blog-cards"
 
 export const metadata: Metadata = {
   title: "Blog Legal | Lex Realis",
@@ -83,57 +84,7 @@ export default function BlogPage() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {featuredPosts.map((post) => (
-                <Card key={post.slug} className="hover:shadow-lg transition-shadow">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex gap-2">
-                        <Badge variant="secondary" className="text-xs">
-                          {post.category}
-                        </Badge>
-                        <Badge variant="outline" className="text-xs">
-                          {post.readTime}
-                        </Badge>
-                      </div>
-                    </div>
-                    <CardTitle className="text-xl leading-tight">
-                      <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
-                        {post.title}
-                      </Link>
-                    </CardTitle>
-                    <CardDescription className="text-base">{post.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
-                        {post.readTime}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <User className="h-4 w-4" />
-                        {post.author}
-                      </div>
-                    </div>
-
-                    <div className="flex flex-wrap gap-1">
-                      {post.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-xs">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-
-                    <Button asChild className="w-full">
-                      <Link href={`/blog/${post.slug}`}>
-                        Leer artículo
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <BlogCards />
           </div>
         </section>
       )}

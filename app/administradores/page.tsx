@@ -312,7 +312,7 @@ export default function AdministradoresPage() {
                   ¿Por qué elegir <span className="text-[#BF7F11]">nuestros servicios</span>?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  Más de 15 años especializados en derecho inmobiliario y administración de edificios.
+                  Años de experiencia especializados en derecho inmobiliario y administración de edificios.
                 </p>
               </div>
 

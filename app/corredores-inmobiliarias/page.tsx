@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { FileSearch, Shield, AlertCircle, CheckCircle, Clock, DollarSign, ArrowRight, Users } from "lucide-react"
+import ResultadosCards from "@/components/ui/resultados-cards"
 
 export const metadata: Metadata = {
   title: "Servicios para Corredores e Inmobiliarias | Lex Realis",
@@ -189,33 +190,13 @@ export default function CorredoresPage() {
       <section className="py-16 md:py-24">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-4">Resultados que hablan por sí solos</h2>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-4">Resultados que Entregamos</h2>
             <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Nuestros clientes corredores e inmobiliarias han logrado resultados excepcionales.
+              Nuestros servicios especializados generan resultados concretos y medibles.
             </p>
           </div>
 
-          <div className="grid gap-6 md:gap-8 md:grid-cols-3">
-            <Card className="text-center p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold text-[#BF7F11] mb-2">98%</div>
-              <div className="text-base md:text-lg font-semibold mb-2">Comisiones protegidas</div>
-              <p className="text-sm md:text-base text-muted-foreground">
-                De las comisiones de nuestros clientes han sido cobradas exitosamente.
-              </p>
-            </Card>
-
-            <Card className="text-center p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold text-[#BF7F11] mb-2">15 días</div>
-              <div className="text-base md:text-lg font-semibold mb-2">Tiempo promedio</div>
-              <p className="text-sm md:text-base text-muted-foreground">Para resolver controversias mediante mediación extrajudicial.</p>
-            </Card>
-
-            <Card className="text-center p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold text-[#BF7F11] mb-2">0</div>
-              <div className="text-base md:text-lg font-semibold mb-2">Fraudes reportados</div>
-              <p className="text-sm md:text-base text-muted-foreground">En operaciones gestionadas con nuestros protocolos de seguridad.</p>
-            </Card>
-          </div>
+          <ResultadosCards />
         </div>
       </section>
 
@@ -225,9 +206,9 @@ export default function CorredoresPage() {
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">¿Por qué confiar en nosotros?</h2>
+                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">¿Por qué elegirnos?</h2>
                 <p className="text-base sm:text-xl text-muted-foreground">
-                  Especialistas en derecho inmobiliario con foco en protección de corredores.
+                  Especialización en derecho inmobiliario y bancario.
                 </p>
               </div>
 
@@ -237,9 +218,9 @@ export default function CorredoresPage() {
                     <Clock className="h-6 w-6 text-[#BF7F11]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Respuesta inmediata</h3>
+                    <h3 className="font-semibold mb-2">Procesos claros y transparentes</h3>
                     <p className="text-muted-foreground">
-                      Atención prioritaria para casos urgentes de comisiones en riesgo.
+                      Metodología clara y transparente en todos nuestros procesos legales.
                     </p>
                   </div>
                 </div>
@@ -249,9 +230,9 @@ export default function CorredoresPage() {
                     <Shield className="h-6 w-6 text-[#BF7F11]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Contratos blindados</h3>
+                    <h3 className="font-semibold mb-2">Respaldo jurídico que protege tu negocio y tu inversión</h3>
                     <p className="text-muted-foreground">
-                      Documentos que han resistido impugnaciones y protegen tus intereses.
+                      Protección legal integral para tu negocio inmobiliario y tus inversiones.
                     </p>
                   </div>
                 </div>
@@ -261,9 +242,9 @@ export default function CorredoresPage() {
                     <DollarSign className="h-6 w-6 text-[#BF7F11]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Éxito no cobramos</h3>
+                    <h3 className="font-semibold mb-2">Especialización en derecho inmobiliario y bancario</h3>
                     <p className="text-muted-foreground">
-                      En casos de defensa de comisión, solo cobramos si recuperamos tu dinero.
+                      Experiencia especializada en las áreas legal e inmobiliaria y bancaria.
                     </p>
                   </div>
                 </div>
@@ -274,10 +255,10 @@ export default function CorredoresPage() {
               <div className="absolute inset-0 bg-gradient-to-r from-[#BF7F11]/20 to-transparent rounded-3xl transform rotate-3"></div>
               <Card className="relative p-6 md:p-8 bg-white shadow-xl">
                 <div className="text-center space-y-4">
-                  <div className="text-3xl md:text-4xl font-bold text-[#BF7F11]">$2.5M</div>
-                  <div className="text-base md:text-lg font-semibold">Comisiones recuperadas</div>
+                  <div className="text-3xl md:text-4xl font-bold text-[#BF7F11]">500+</div>
+                  <div className="text-base md:text-lg font-semibold">Contratos gestionados</div>
                   <p className="text-sm md:text-base text-muted-foreground">
-                    En el último año hemos recuperado más de $2.5 millones en comisiones para nuestros clientes.
+                    Más de 500 contratos gestionados, más de 10 mil millones de pesos en transacciones inmobiliarias.
                   </p>
                 </div>
               </Card>
@@ -302,7 +283,7 @@ export default function CorredoresPage() {
                 <Link href="/contacto">Cotiza aquí</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-[#BF7F11]/30 text-[#BF7F11] hover:bg-[#BF7F11]/5">
-                <Link href="/casos">Ver casos de éxito</Link>
+                <Link href="/blog">Ver Blog</Link>
               </Button>
             </div>
           </div>

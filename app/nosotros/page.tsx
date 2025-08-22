@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AnimatedTeam } from "@/components/ui/animated-team"
+import { AutoCarousel } from "@/components/ui/auto-carousel"
 import {
   Scale,
   Award,
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 const team = [
   {
     name: "Cristóbal Zaror Faggioni",
-    role: "Socio Fundador",
+    role: "Socio",
     specialization: "Derecho Inmobiliario y Copropiedad",
     education: "Universidad Adolfo Ibáñez",
     experience: "10+ años",
@@ -45,7 +46,7 @@ const team = [
   },
   {
     name: "Matías Sánchez Strange",
-    role: "Socio",
+    role: "Abogado",
     specialization: "Derecho del Consumo y Contratos",
     education: "Universidad Adolfo Ibáñez",
     experience: "8+ años",
@@ -54,7 +55,7 @@ const team = [
   },
   {
     name: "Juan Ferrer Williams",
-    role: "Abogado Senior",
+    role: "Abogado",
     specialization: "Derecho Inmobiliario y Corporativo",
     education: "Universidad Adolfo Ibáñez",
     experience: "6+ años",
@@ -87,29 +88,6 @@ const team = [
     experience: "3+ años",
     description: "Especializada en coordinación de casos, gestión documental y apoyo en procedimientos legales.",
     image: "/catalina-aguilar-silva.png",
-  },
-]
-
-const credentials = [
-  {
-    title: "Colegio de Abogados de Chile",
-    description: "Miembros activos con certificación vigente",
-    icon: Scale,
-  },
-  {
-    title: "Asociación de Derecho Inmobiliario",
-    description: "Participación activa en desarrollo normativo",
-    icon: Building2,
-  },
-  {
-    title: "Certificación ISO 9001",
-    description: "Procesos certificados de calidad",
-    icon: Award,
-  },
-  {
-    title: "Mediadores Certificados",
-    description: "Centro de Mediación y Arbitraje",
-    icon: Users,
   },
 ]
 
@@ -161,8 +139,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-
-
       {/* Mission & Vision */}
       <section className="py-16 md:py-24">
         <div className="container">
@@ -187,16 +163,7 @@ export default function NosotrosPage() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
-              <Image
-                src="/legal-team-meeting.png"
-                alt="Equipo Lex Realis en reunión"
-                width={600}
-                height={400}
-                className="relative rounded-2xl shadow-xl"
-              />
-            </div>
+            <AutoCarousel />
           </div>
         </div>
       </section>
@@ -212,34 +179,6 @@ export default function NosotrosPage() {
           </div>
 
           <AnimatedTeam team={team} autoplay={false} />
-        </div>
-      </section>
-
-      {/* Credentials */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">Credenciales y Certificaciones</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Respaldados por las principales instituciones del sector legal y inmobiliario.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {credentials.map((credential, index) => (
-              <Card key={index} className="text-center border-2 hover:border-primary/20 transition-colors">
-                <CardHeader>
-                  <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                    <credential.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg">{credential.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">{credential.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -274,76 +213,20 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Press & Recognition */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">Reconocimientos y Prensa</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Nuestro trabajo ha sido reconocido por medios especializados y organizaciones del sector.
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            <Card className="border-2">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Badge variant="secondary">Revista Inmobiliaria</Badge>
-                </div>
-                <h3 className="font-semibold mb-2">"Los especialistas en cobranza de gastos comunes"</h3>
-                <p className="text-sm text-muted-foreground">
-                  Artículo destacando nuestras innovaciones en automatización de procesos de cobranza.
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">Marzo 2024</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Badge variant="secondary">Diario Financiero</Badge>
-                </div>
-                <h3 className="font-semibold mb-2">"Protección legal para corredores de propiedades"</h3>
-                <p className="text-sm text-muted-foreground">
-                  Entrevista sobre estrategias legales para proteger comisiones de corredores.
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">Enero 2024</p>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2">
-              <CardContent className="p-6">
-                <div className="mb-4">
-                  <Badge variant="secondary">Premio Excelencia</Badge>
-                </div>
-                <h3 className="font-semibold mb-2">"Mejor Estudio Jurídico Inmobiliario 2023"</h3>
-                <p className="text-sm text-muted-foreground">
-                  Reconocimiento por la Cámara Chilena de la Construcción por innovación en servicios legales.
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">Diciembre 2023</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-muted/30">
         <div className="container text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl">¿Listo para trabajar con especialistas?</h2>
             <p className="text-xl text-muted-foreground">
-              Agenda una consulta gratuita y descubre cómo nuestra experiencia puede resolver tus desafíos legales.
+              Agenda una consulta y descubre cómo nuestra experiencia puede resolver tus desafíos legales y apoyarte en el proceso.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button asChild size="lg">
                 <Link href="/contacto">
-                  Agenda tu consulta gratuita
+                  Contáctanos
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/casos">Ver casos de éxito</Link>
               </Button>
             </div>
           </div>

@@ -227,15 +227,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <Button asChild size="lg" className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
                 <Link href="/contacto">
-                  Consulta Gratuita
+                  Cotiza Aquí
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/blog">Ver más artículos</Link>
               </Button>
             </div>
           </div>

@@ -182,6 +182,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         info: Info,
         warning: AlertTriangle,
         success: CheckCircle,
+        error: AlertTriangle,
       }
       const Icon = icons[type as keyof typeof icons]
       
