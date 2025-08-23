@@ -111,31 +111,31 @@ export const AnimatedTeam = ({
             transition={{ duration: 0.3, delay: 0.1 }}
             className="text-center px-4"
           >
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            <h3 className="text-xl font-bold mb-2">
               {team[active].name}
             </h3>
-            <p className="text-sm text-primary font-semibold mb-4">
+            <p className="text-sm text-muted-foreground font-semibold mb-4">
               {team[active].role}
             </p>
             
             <div className="space-y-3 mb-6">
               <div>
-                <h4 className="font-semibold text-sm text-primary mb-1">Especialización</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{team[active].specialization}</p>
+                <h4 className="font-semibold text-sm text-muted-foreground mb-1">Especialización</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{team[active].specialization}</p>
               </div>
               
               <div>
-                <h4 className="font-semibold text-sm text-primary mb-1">Formación</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{team[active].education}</p>
+                <h4 className="font-semibold text-sm text-muted-foreground mb-1">Formación</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">{team[active].education}</p>
               </div>
               
               <div>
-                <h4 className="font-semibold text-sm text-primary mb-1">Experiencia</h4>
-                <p className="text-sm font-medium text-primary">{team[active].experience}</p>
+                <h4 className="font-semibold text-sm text-muted-foreground mb-1">Experiencia</h4>
+                <p className="text-sm font-medium text-muted-foreground">{team[active].experience}</p>
               </div>
             </div>
 
-            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 px-4">
+            <p className="text-sm text-muted-foreground leading-relaxed mb-6 px-4">
               {team[active].description}
             </p>
           </motion.div>

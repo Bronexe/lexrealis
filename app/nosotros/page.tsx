@@ -130,7 +130,7 @@ export default function NosotrosPage() {
               Sobre Lex Realis
             </Badge>
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-              <span className="text-[#BF7F11]">Abogados especializados</span> en <span className="text-primary">derecho inmobiliario</span>
+              <span className="text-[#BF7F11]">Abogados especializados</span> en <span className="text-primary">copropiedad inmobiliaria y derecho civil</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Somos un estudio jurídico boutique enfocado exclusivamente en derecho inmobiliario, copropiedad y consumo,
