@@ -28,7 +28,7 @@ export function SiteHeader() {
               Administradores
             </Link>
             <Link
-              href="/corredores-inmobiliarias"
+                                href="/corredores-agentes"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Corredores
@@ -69,7 +69,7 @@ export function SiteHeader() {
                 <Link href="/administradores" onClick={() => setIsOpen(false)}>
                   Administradores
                 </Link>
-                <Link href="/corredores-inmobiliarias" onClick={() => setIsOpen(false)}>
+                <Link href="/corredores-agentes" onClick={() => setIsOpen(false)}>
                   Corredores e Inmobiliarias
                 </Link>
 

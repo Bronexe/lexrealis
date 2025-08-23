@@ -45,21 +45,21 @@ const services = [
     icon: FileSearch,
     title: "Estudio de Títulos",
     description:
-      "Revisamos los antecedentes legales de la propiedad para garantizar que esté libre de cargas y gravámenes, brindando seguridad jurídica en la transacción.",
+              "Revisamos la situación jurídica de la propiedad para garantizar que esté libre de cargas y gravámenes, brindando seguridad jurídica en la transacción.",
     category: "Due Diligence",
   },
   {
     icon: Users,
     title: "Representación Legal",
     description:
-      "Ofrecemos representación legal en todas las etapas de transacciones inmobiliarias, defendiendo tus derechos y garantizando un proceso transparente y seguro.",
+              "Ofrecemos asesoría legal en todas las etapas de transacciones inmobiliarias, defendiendo tus derechos y garantizando un proceso transparente y seguro.",
     category: "Representación",
   },
   {
     icon: DollarSign,
     title: "Cobranza de Gastos Comunes",
     description:
-      "Gestionamos la cobranza de gastos comunes, actuando de manera eficiente y profesional para asegurar el cumplimiento de las obligaciones financieras de los propietarios.",
+              "Gestionamos la cobranza de gastos comunes, actuando de manera eficiente y profesional para asegurar el cumplimiento de las obligaciones económicas de los propietarios.",
     category: "Administración",
   },
   {
@@ -179,7 +179,7 @@ export default function HomePage() {
                   <Scale className="h-6 w-6 text-[#BF7F11]" />
                 </div>
                 <CardTitle className="text-xl">Especialización</CardTitle>
-                <CardDescription>Dedicados al derecho inmobiliario y a la administración</CardDescription>
+                <CardDescription>Dedicados a la copropiedad inmobiliaria y a la administración</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2">
@@ -323,7 +323,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <Button asChild className="w-full bg-[#BF7F11] hover:bg-[#BF7F11]/90">
-                  <Link href="/corredores-inmobiliarias">
+                  <Link href="/corredores-agentes">
                     Ver servicios para corredores
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -338,7 +338,7 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-[#BF7F11]/5">
         <div className="container text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">¿Listo para proteger tu negocio?</h2>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">¿Listo para contar con el respaldo legal que tu negocio necesita?</h2>
             <p className="text-xl text-muted-foreground">
               Cotiza aquí y descubre cómo podemos ayudarte a resolver tus desafíos legales de manera
               eficiente.

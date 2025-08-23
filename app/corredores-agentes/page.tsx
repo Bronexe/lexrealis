@@ -24,18 +24,18 @@ export const metadata: Metadata = {
 const problems = [
   {
     icon: FileSearch,
-    title: "Estudio de Títulos",
-    description: "Análisis completo de la situación jurídica de la propiedad con informe ejecutivo detallado.",
+    title: "Estudio de Títulos de Propiedades",
+    description: "Análisis completo de la situación jurídica de un inmueble, revisando los vicios que puedan afectar a la propiedad.",
   },
   {
     icon: Shield,
     title: "Redacción de Promesa de Compraventa",
-    description: "Documentos legalmente sólidos que protegen los intereses de todas las partes involucradas.",
+    description: "Elaboración de promesa de compraventa, incluyendo lo acordado por el comprador y vendedor, estableciendo condiciones, plazos y forma de pago.",
   },
   {
     icon: DollarSign,
-    title: "Contratos de Prestación de Servicios",
-    description: "Elaboración de contratos blindados para servicios inmobiliarios y de corretaje.",
+    title: "Contratos de Corretaje y Prestación de Servicios",
+    description: "Confección de contratos de corretaje, protegiendo la comisión pactada, forma de trabajo, condiciones, plazos y servicios",
   },
   {
     icon: AlertCircle,
@@ -50,7 +50,7 @@ const problems = [
   {
     icon: CheckCircle,
     title: "Confección de Compraventa Definitiva",
-    description: "Redacción de escrituras públicas definitivas con todas las garantías legales.",
+    description: "Redacción de escrituras públicas definitivas con el cumplimiento de todos los requisitos legales.",
   },
 ]
 
@@ -70,7 +70,7 @@ const services = [
     title: "Plan Compraventa Segura",
     description: "Promesa + Estudio de Títulos + Compraventa + Inscripción",
     features: [
-      "Promesa de compraventa blindada",
+      "Promesa de compraventa",
       "Estudio completo de títulos",
       "Compraventa definitiva",
       "Inscripción en el Conservador",
@@ -79,7 +79,7 @@ const services = [
     badge: "Más Popular",
   },
   {
-    title: "Defensa de Comisión",
+    title: "Incumplimiento de Contrato de Corretaje",
     description: "Cobro y mediación especializada",
     features: ["Estrategias de cobro", "Mediación extrajudicial", "Representación judicial", "Seguimiento de casos"],
     price: "Desde $200.000",
@@ -100,8 +100,7 @@ export default function CorredoresPage() {
               Protege tus <span className="text-[#BF7F11]">comisiones</span> y acelera tus operaciones
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Contratos blindados, estudios de títulos y defensa legal especializada para corredores de propiedades e
-              inmobiliarias.
+              Contratos, estudios de títulos y defensa legal especializada para corredores de propiedades e agentes inmobiliarios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
@@ -152,7 +151,7 @@ export default function CorredoresPage() {
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-4">Nuestros Servicios</h2>
             <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
-              Soluciones diseñadas específicamente para corredores de propiedades e inmobiliarias.
+              Soluciones diseñadas específicamente para corredores de propiedades e agente inmobiliarios.
             </p>
           </div>
 
@@ -208,7 +207,7 @@ export default function CorredoresPage() {
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">¿Por qué elegirnos?</h2>
                 <p className="text-base sm:text-xl text-muted-foreground">
-                  Especialización en derecho inmobiliario y bancario.
+                  Abogados especializados en copropiedad inmobiliaria y derecho civil
                 </p>
               </div>
 
@@ -242,7 +241,7 @@ export default function CorredoresPage() {
                     <DollarSign className="h-6 w-6 text-[#BF7F11]" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-2">Especialización en derecho inmobiliario y bancario</h3>
+                    <h3 className="font-semibold mb-2">Especialización en copropiedad inmobiliaria y derecho civil</h3>
                     <p className="text-muted-foreground">
                       Experiencia especializada en las áreas legal e inmobiliaria y bancaria.
                     </p>

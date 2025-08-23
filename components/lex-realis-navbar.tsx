@@ -81,7 +81,7 @@ function Navbar({ className }: { className?: string }) {
                         Administradores
                       </Link>
                       <Link 
-                        href="/corredores-inmobiliarias" 
+                        href="/corredores-agentes" 
                         className="block py-2 px-3 rounded-lg hover:bg-muted transition-colors"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
@@ -154,7 +154,7 @@ function Navbar({ className }: { className?: string }) {
             <MenuItem setActive={setActive} active={active} item="Servicios">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/administradores">Administradores</HoveredLink>
-                <HoveredLink href="/corredores-inmobiliarias">Corredores e Inmobiliarias</HoveredLink>
+                <HoveredLink href="/corredores-agentes">Corredores e Inmobiliarias</HoveredLink>
               </div>
             </MenuItem>
 

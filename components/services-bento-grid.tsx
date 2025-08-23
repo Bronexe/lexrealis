@@ -37,19 +37,19 @@ const Skeleton = ({ className }: { className?: string }) => (
 const services = [
   {
     title: "Estudio de Títulos",
-    description: "Revisamos los antecedentes legales de la propiedad para garantizar que esté libre de cargas y gravámenes, brindando seguridad jurídica en la transacción.",
+            description: "Revisamos la situación jurídica de la propiedad para garantizar que esté libre de cargas y gravámenes, brindando seguridad jurídica en la transacción.",
     header: <Skeleton className="bg-gradient-to-br from-[#BF7F11]/20 to-[#BF7F11]/10" />,
     icon: <FileSearch className="h-6 w-6 text-[#BF7F11]" />,
   },
   {
     title: "Representación Legal",
-    description: "Ofrecemos representación legal en todas las etapas de transacciones inmobiliarias, defendiendo tus derechos y garantizando un proceso transparente y seguro.",
+            description: "Ofrecemos asesoría legal en todas las etapas de transacciones inmobiliarias, defendiendo tus derechos y garantizando un proceso transparente y seguro.",
     header: <Skeleton />,
     icon: <Users className="h-6 w-6 text-[#BF7F11]" />,
   },
   {
     title: "Cobranza de Gastos Comunes",
-    description: "Gestionamos la cobranza de gastos comunes, actuando de manera eficiente y profesional para asegurar el cumplimiento de las obligaciones financieras.",
+            description: "Gestionamos la cobranza de gastos comunes, actuando de manera eficiente y profesional para asegurar el cumplimiento de las obligaciones económicas.",
     header: <Skeleton />,
     icon: <DollarSign className="h-6 w-6 text-[#BF7F11]" />,
   },

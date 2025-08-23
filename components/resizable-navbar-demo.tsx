@@ -21,7 +21,7 @@ export default function LexRealisResizableNavbar() {
     },
     {
       name: "Corredores",
-      link: "/corredores-inmobiliarias",
+      link: "/corredores-agentes",
     },
     {
       name: "Blog",

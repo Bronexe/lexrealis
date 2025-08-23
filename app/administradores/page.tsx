@@ -51,7 +51,7 @@ const problems = [
   {
     icon: Users,
     title: "Contratos con proveedores",
-    description: "Elaboración de contratos blindados, gestión de responsabilidad civil y laboral.",
+    description: "Elaboración de contratos con cauciones, gestión de responsabilidad civil y laboral.",
   },
   {
     icon: Building2,
@@ -60,8 +60,8 @@ const problems = [
   },
   {
     icon: AlertTriangle,
-    title: "Conflictos habituales",
-    description: "Resolución de disputas por ruidos, filtraciones, mascotas, morosidad y convivencia.",
+          title: "Conflictos entre copropietarios",
+      description: "Resolución de disputas por ruidos, filtraciones, mascotas, morosidad y convivencia.",
   },
   {
     icon: Scale,
@@ -312,7 +312,7 @@ export default function AdministradoresPage() {
                   ¿Por qué elegir <span className="text-[#BF7F11]">nuestros servicios</span>?
                 </h2>
                 <p className="text-xl text-muted-foreground">
-                  Más de 15 años especializados en derecho inmobiliario y administración de edificios.
+                  Años de experiencia especializados en copropiedad inmobiliaria y administración de edificios.
                 </p>
               </div>
 

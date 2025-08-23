@@ -47,7 +47,7 @@ export function AudienceSwitcher() {
 
           {/* Corredores Card */}
           <div className="max-w-xs w-full mx-auto">
-            <Link href="/corredores-inmobiliarias">
+            <Link href="/corredores-agentes">
               <div
                 className={cn(
                   "group w-full cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl flex flex-col justify-end p-6 border border-transparent dark:border-neutral-800",

@@ -50,13 +50,7 @@ export default function ResultadosCards() {
       bgColor: "bg-gradient-to-br from-[#BF7F11]/90 to-[#A66B0F]/90",
       hoverColor: "bg-gradient-to-br from-[#A66B0F] to-[#8B5A0D]"
     },
-    {
-      emoji: "🏦",
-      title: "Confianza para instituciones financieras",
-      description: "Hemos asesorado a compradores y bancos en constitución de hipotecas y mutuos, asegurando créditos respaldados legalmente.",
-      bgColor: "bg-gradient-to-br from-[#BF7F11]/80 to-[#A66B0F]/80",
-      hoverColor: "bg-gradient-to-br from-[#A66B0F] to-[#8B5A0D]"
-    },
+
     {
       emoji: "⏱️",
       title: "Agilidad en los procesos",
@@ -74,7 +68,7 @@ export default function ResultadosCards() {
   ];
 
   return (
-    <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+    <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-4">
       {resultados.map((resultado, index) => (
         <ResultadoCard
           key={index}

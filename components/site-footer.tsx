@@ -30,7 +30,7 @@ export function SiteFooter() {
                 </Link>
               </li>
               <li>
-                <Link href="/corredores-inmobiliarias" className="text-muted-foreground hover:text-primary">
+                <Link href="/corredores-agentes" className="text-muted-foreground hover:text-primary">
                   Corredores e Inmobiliarias
                 </Link>
               </li>

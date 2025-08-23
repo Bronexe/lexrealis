@@ -126,7 +126,7 @@ function MobileNavbar() {
                     Administradores
                   </Link>
                   <Link
-                    href="/corredores-inmobiliarias"
+                    href="/corredores-agentes"
                     className="block text-sm text-gray-700 dark:text-gray-300 hover:text-[#BF7F11]"
                     onClick={() => setIsOpen(false)}
                   >

@@ -35,7 +35,7 @@ npm run dev
 lex-realis/
 ├── app/                    # App Router de Next.js
 │   ├── administradores/    # Página de servicios para administradores
-│   ├── corredores-inmobiliarias/ # Página de servicios para corredores
+│   ├── corredores-agentes/ # Página de servicios para corredores
 │   ├── casos/             # Casos de éxito
 │   ├── recursos/          # Recursos legales
 │   ├── nosotros/          # Página sobre la empresa
