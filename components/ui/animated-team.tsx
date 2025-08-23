@@ -68,37 +68,40 @@ export const AnimatedTeam = ({
   }, [autoplay]);
 
   return (
-    <div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
+    <div className="mx-auto max-w-sm px-4 py-12 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12 md:py-20">
       {/* Mobile Version with Swipe */}
       <div className="block md:hidden">
-        <div className="relative h-96 w-full mb-8">
-          <motion.div
-            drag="x"
-            dragConstraints={{ left: 0, right: 0 }}
-            dragElastic={0.1}
-            onDragEnd={handleDragEnd}
-            className="relative h-full w-full"
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                initial={{ opacity: 0, x: 300 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -300 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={team[active].image}
-                  alt={team[active].name}
-                  width={500}
-                  height={500}
-                  draggable={false}
-                  className="h-full w-full rounded-3xl object-cover object-center"
-                />
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
+        <div className="relative w-full mb-8">
+          {/* Image Container */}
+          <div className="relative h-80 w-full mb-6">
+            <motion.div
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.1}
+              onDragEnd={handleDragEnd}
+              className="relative h-full w-full"
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active}
+                  initial={{ opacity: 0, x: 300 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -300 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={team[active].image}
+                    alt={team[active].name}
+                    width={500}
+                    height={500}
+                    draggable={false}
+                    className="h-full w-full rounded-3xl object-cover object-center"
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          </div>
 
           {/* Mobile Info */}
           <motion.div
@@ -106,9 +109,9 @@ export const AnimatedTeam = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="text-center"
+            className="text-center px-2"
           >
-            <h3 className="text-2xl font-bold text-black dark:text-white mb-2">
+            <h3 className="text-xl font-bold text-black dark:text-white mb-2">
               {team[active].name}
             </h3>
             <p className="text-sm text-primary font-semibold mb-4">
@@ -118,12 +121,12 @@ export const AnimatedTeam = ({
             <div className="space-y-3 mb-6">
               <div>
                 <h4 className="font-semibold text-sm text-primary mb-1">Especialización</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">{team[active].specialization}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{team[active].specialization}</p>
               </div>
               
               <div>
                 <h4 className="font-semibold text-sm text-primary mb-1">Formación</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">{team[active].education}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{team[active].education}</p>
               </div>
               
               <div>
@@ -132,18 +135,18 @@ export const AnimatedTeam = ({
               </div>
             </div>
 
-            <p className="text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 px-2">
               {team[active].description}
             </p>
           </motion.div>
 
           {/* Mobile Navigation */}
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-4 mt-6">
             <button
               onClick={handlePrev}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 hover:bg-primary hover:text-white transition-all duration-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 hover:bg-primary hover:text-white transition-all duration-300"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5" />
             </button>
             
             <div className="flex gap-2">
@@ -151,7 +154,7 @@ export const AnimatedTeam = ({
                 <button
                   key={index}
                   onClick={() => setActive(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                  className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
                     index === active ? "bg-primary" : "bg-gray-300 dark:bg-gray-600"
                   }`}
                 />
@@ -160,9 +163,9 @@ export const AnimatedTeam = ({
             
             <button
               onClick={handleNext}
-              className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 hover:bg-primary hover:text-white transition-all duration-300"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 hover:bg-primary hover:text-white transition-all duration-300"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5" />
             </button>
           </div>
         </div>
