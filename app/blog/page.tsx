@@ -84,7 +84,7 @@ export default function BlogPage() {
               </p>
             </div>
 
-            <BlogCards />
+            <BlogCards posts={featuredPosts} />
           </div>
         </section>
       )}

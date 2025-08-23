@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import HeroSectionLegal from "@/components/ui/hero-section-legal"
+import { getBlogPosts } from "@/lib/mdx"
+import BlogCards from "@/components/ui/blog-cards"
 import {
   ArrowRight,
   Building2,
@@ -98,6 +100,10 @@ const services = [
 ]
 
 export default function HomePage() {
+  // Obtener los 4 posts más recientes del blog
+  const allPosts = getBlogPosts()
+  const recentPosts = allPosts.slice(0, 4)
+
   return (
     <div className="flex flex-col">
       {/* Hero Section with Video Background */}
@@ -260,71 +266,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
-            <Card className="border-2 hover:border-[#BF7F11]/20 transition-all duration-300 hover:shadow-lg group">
-              <CardHeader>
-                <div className="flex items-start justify-between mb-3">
-                  <Badge variant="secondary" className="text-xs bg-[#BF7F11]/10 text-[#BF7F11]">
-                    Administradores
-                  </Badge>
-                  <span className="text-xs text-muted-foreground">8 min</span>
-                </div>
-                <CardTitle className="text-xl leading-tight group-hover:text-[#BF7F11] transition-colors">
-                  Cobro de Gastos Comunes en Chile 2025: Guía Completa
-                </CardTitle>
-                <CardDescription className="text-sm">
-                  Todo lo que necesitas saber sobre el cobro de gastos comunes en condominios chilenos. Procedimientos legales, plazos y alternativas extrajudiciales para 2025.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                    <span>15 Ene 2025</span>
-                    <span>•</span>
-                    <span>Lex Realis</span>
-                  </div>
-                  <Button asChild variant="ghost" size="sm" className="text-[#BF7F11] hover:text-[#BF7F11]/80">
-                    <Link href="/blog/cobro-gastos-comunes-chile-2025">
-                      Leer más
-                      <ArrowRight className="ml-1 h-3 w-3" />
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-2 hover:border-[#BF7F11]/20 transition-all duration-300 hover:shadow-lg group">
-              <CardHeader>
-                <div className="flex items-start justify-between mb-3">
-                  <Badge variant="secondary" className="text-xs bg-[#BF7F11]/10 text-[#BF7F11]">
-                    Administradores
-                  </Badge>
-                  <span className="text-xs text-muted-foreground">10 min</span>
-                </div>
-                <CardTitle className="text-xl leading-tight group-hover:text-[#BF7F11] transition-colors">
-                  Guía Legal: Asambleas de Copropietarios y Quórums según la Ley N° 21.442
-                </CardTitle>
-                <CardDescription className="text-sm">
-                  Todo lo que necesitas saber sobre las asambleas de copropietarios, quórums y procedimientos según la nueva Ley de Copropiedad Inmobiliaria N° 21.442.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                    <span>16 Ene 2025</span>
-                    <span>•</span>
-                    <span>Lex Realis</span>
-                  </div>
-                  <Button asChild variant="ghost" size="sm" className="text-[#BF7F11] hover:text-[#BF7F11]/80">
-                    <Link href="/blog/asambleas-copropietarios-quorums-ley-21442">
-                      Leer más
-                      <ArrowRight className="ml-1 h-3 w-3" />
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                    <BlogCards posts={recentPosts} />
 
           <div className="text-center mt-12">
             <Button asChild variant="outline" size="lg" className="border-[#BF7F11]/30 text-[#BF7F11] hover:bg-[#BF7F11]/5">

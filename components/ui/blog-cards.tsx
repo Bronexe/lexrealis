@@ -2,6 +2,18 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
+interface BlogPost {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  author: string;
+  tags: string[];
+  category: string;
+  readTime: string;
+  featured?: boolean;
+}
+
 interface BlogCardProps {
   title: string;
   description: string;
@@ -64,7 +76,11 @@ function BlogCard({ title, description, author, readTime, slug, category, bgColo
   );
 }
 
-export default function BlogCards() {
+interface BlogCardsProps {
+  posts: BlogPost[];
+}
+
+export default function BlogCards({ posts }: BlogCardsProps) {
   // Abogados del equipo Lex Realis
   const abogados = [
     {
@@ -89,34 +105,19 @@ export default function BlogCards() {
     }
   ];
 
-  // Posts de ejemplo con autores alternados y colores corporativos
-  const posts = [
-    {
-      title: "Guía Completa: Cómo ser Administrador de Condominios en Chile",
-      description: "Todo lo que necesitas saber para convertirte en administrador de condominios en Chile. Requisitos legales, proceso de inscripción, obligaciones y marco normativo vigente.",
-      readTime: "12 min",
-      slug: "guia-administrador-condominios-chile",
-      category: "Administradores",
-      bgColor: "bg-gradient-to-br from-[#BF7F11] to-[#A66B0F]"
-    },
-    {
-      title: "Asambleas de Copropietarios: Quórums y Ley 21.442",
-      description: "Análisis completo de los nuevos quórums establecidos en la Ley 21.442 para asambleas de copropietarios y su impacto en la administración de condominios.",
-      readTime: "8 min",
-      slug: "asambleas-copropietarios-quorums-ley-21442",
-      category: "Copropiedad",
-      bgColor: "bg-gradient-to-br from-[#BF7F11]/90 to-[#A66B0F]/90"
-    },
-    {
-      title: "Cobro de Gastos Comunes en Chile 2025",
-      description: "Actualización completa sobre los procedimientos de cobro de gastos comunes, incluyendo las nuevas normativas y mejores prácticas para administradores.",
-      readTime: "10 min",
-      slug: "cobro-gastos-comunes-chile-2025",
-      category: "Administradores",
-      bgColor: "bg-gradient-to-br from-[#BF7F11]/80 to-[#A66B0F]/80"
-    },
-
+  // Colores corporativos para los posts
+  const bgColors = [
+    "bg-gradient-to-br from-[#BF7F11] to-[#A66B0F]",
+    "bg-gradient-to-br from-[#BF7F11]/90 to-[#A66B0F]/90",
+    "bg-gradient-to-br from-[#BF7F11]/80 to-[#A66B0F]/80",
+    "bg-gradient-to-br from-[#BF7F11]/70 to-[#A66B0F]/70"
   ];
+
+  // Función para obtener la imagen del autor basada en el nombre
+  const getAuthorImage = (authorName: string) => {
+    const author = abogados.find(abogado => abogado.name === authorName);
+    return author ? author.image : "/placeholder-user.jpg";
+  };
 
   return (
     <div className="grid gap-6 md:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -125,11 +126,14 @@ export default function BlogCards() {
           key={post.slug}
           title={post.title}
           description={post.description}
-          author={abogados[index % abogados.length]}
+          author={{
+            name: post.author,
+            image: getAuthorImage(post.author)
+          }}
           readTime={post.readTime}
           slug={post.slug}
           category={post.category}
-          bgColor={post.bgColor}
+          bgColor={bgColors[index % bgColors.length]}
         />
       ))}
     </div>

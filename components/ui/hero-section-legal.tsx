@@ -16,7 +16,7 @@ export default function HeroSectionLegal() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/santiago-chile.mp4" type="video/mp4" />
+        <source src="/Oficina Lex Realis Viña del Mar.mp4" type="video/mp4" />
       </video>
       
       {/* Overlay */}

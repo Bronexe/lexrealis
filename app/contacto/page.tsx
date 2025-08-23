@@ -114,17 +114,17 @@ export default function ContactoPage() {
               </Card>
 
               {/* Calendar */}
-              <Card className="border-primary/20 bg-primary/5">
+              <Card className="border-[#BF7F11]/20 bg-[#BF7F11]/5">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-primary/10 rounded-full">
-                      <Calendar className="h-6 w-6 text-primary" />
+                    <div className="p-3 bg-[#BF7F11]/10 rounded-full">
+                      <Calendar className="h-6 w-6 text-[#BF7F11]" />
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold">Agenda directa</h3>
                       <p className="text-sm text-muted-foreground">Reserva tu hora online</p>
                     </div>
-                    <Button asChild>
+                    <Button asChild className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
                       <Link href="/agendar">
                         Agendar
                       </Link>
@@ -153,7 +153,7 @@ export default function ContactoPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-16 md:py-24 bg-[#BF7F11]/5">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight md:text-4xl mb-4">¿Cómo trabajamos?</h2>
@@ -164,16 +164,16 @@ export default function ContactoPage() {
 
           <div className="grid gap-8 md:grid-cols-4">
             <div className="text-center">
-              <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
-                <MessageSquare className="h-8 w-8 text-primary" />
+              <div className="mx-auto mb-4 p-4 bg-[#BF7F11]/10 rounded-full w-fit">
+                <MessageSquare className="h-8 w-8 text-[#BF7F11]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">1. Diagnóstico</h3>
               <p className="text-muted-foreground">Analizamos tu situación y identificamos los puntos críticos.</p>
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
-                <FileText className="h-8 w-8 text-primary" />
+              <div className="mx-auto mb-4 p-4 bg-[#BF7F11]/10 rounded-full w-fit">
+                <FileText className="h-8 w-8 text-[#BF7F11]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">2. Plan</h3>
               <p className="text-muted-foreground">
@@ -182,16 +182,16 @@ export default function ContactoPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
-                <CheckCircle className="h-8 w-8 text-primary" />
+              <div className="mx-auto mb-4 p-4 bg-[#BF7F11]/10 rounded-full w-fit">
+                <CheckCircle className="h-8 w-8 text-[#BF7F11]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">3. Ejecución</h3>
               <p className="text-muted-foreground">Implementamos las soluciones con seguimiento constante.</p>
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-4 p-4 bg-primary/10 rounded-full w-fit">
-                <Clock className="h-8 w-8 text-primary" />
+              <div className="mx-auto mb-4 p-4 bg-[#BF7F11]/10 rounded-full w-fit">
+                <Clock className="h-8 w-8 text-[#BF7F11]" />
               </div>
               <h3 className="text-xl font-semibold mb-2">4. Reporte</h3>
               <p className="text-muted-foreground">Te mantenemos informado con reportes regulares de avance.</p>
