@@ -109,9 +109,9 @@ export const AnimatedTeam = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.1 }}
-            className="text-center px-2"
+            className="text-center px-4"
           >
-            <h3 className="text-xl font-bold text-black dark:text-white mb-2">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               {team[active].name}
             </h3>
             <p className="text-sm text-primary font-semibold mb-4">
@@ -135,7 +135,7 @@ export const AnimatedTeam = ({
               </div>
             </div>
 
-            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 px-2">
+            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 px-4">
               {team[active].description}
             </p>
           </motion.div>
@@ -146,7 +146,7 @@ export const AnimatedTeam = ({
               onClick={handlePrev}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 hover:bg-primary hover:text-white transition-all duration-300"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-5 w-5 text-gray-700 dark:text-gray-300" />
             </button>
             
             <div className="flex gap-2">
@@ -154,8 +154,8 @@ export const AnimatedTeam = ({
                 <button
                   key={index}
                   onClick={() => setActive(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
-                    index === active ? "bg-primary" : "bg-gray-300 dark:bg-gray-600"
+                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                    index === active ? "bg-[#BF7F11]" : "bg-gray-300 dark:bg-gray-600"
                   }`}
                 />
               ))}
@@ -165,7 +165,7 @@ export const AnimatedTeam = ({
               onClick={handleNext}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 hover:bg-primary hover:text-white transition-all duration-300"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5 text-gray-700 dark:text-gray-300" />
             </button>
           </div>
         </div>
@@ -298,8 +298,8 @@ export const AnimatedTeam = ({
                   <button
                     key={index}
                     onClick={() => setActive(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                      index === active ? "bg-primary" : "bg-gray-300 dark:bg-gray-600"
+                    className={`w-2.5 h-2.5 rounded-full transition-colors duration-300 ${
+                      index === active ? "bg-[#BF7F11]" : "bg-gray-300 dark:bg-gray-600"
                     }`}
                   />
                 ))}
