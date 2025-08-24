@@ -4,20 +4,25 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
+import { OptimizedVideo } from "@/components/ui/optimized-video"
 
 export default function HeroSectionLegal() {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
-      <video
+      {/* Video Background Optimizado */}
+      <OptimizedVideo
+        webmSrc="/optimized/Oficina Lex Realis Viña del Mar.webm"
+        mp4Src="/optimized/Oficina Lex Realis Viña del Mar-optimized.mp4"
+        fallbackSrc="/Oficina Lex Realis Viña del Mar.mp4"
+        poster="/optimized/Oficina Lex Realis Viña del Mar-thumbnail.jpg"
+        className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/Oficina Lex Realis Viña del Mar.mp4" type="video/mp4" />
-      </video>
+        preload="metadata"
+        lazy={false} // No lazy loading para el hero video
+      />
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>

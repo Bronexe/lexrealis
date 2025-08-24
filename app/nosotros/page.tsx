@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { AnimatedTeam } from "@/components/ui/animated-team"
 import { AutoCarousel } from "@/components/ui/auto-carousel"
-import StickyScrollRevealDemo from "@/components/ui/sticky-scroll-reveal-demo"
+import { OptimizedStickyScroll } from "@/components/ui/optimized-sticky-scroll"
 import {
   Scale,
   Award,
@@ -193,7 +193,7 @@ export default function NosotrosPage() {
             </p>
           </div>
 
-          <StickyScrollRevealDemo />
+          <OptimizedStickyScroll />
         </div>
       </section>
 

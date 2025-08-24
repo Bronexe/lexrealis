@@ -47,11 +47,13 @@ export function AutoCarousel() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform rotate-3"></div>
               <Image
-                src="/Abogados inmobiliarios viña del mar.jpg"
+                src="/optimized/Abogados inmobiliarios viña del mar.webp"
                 alt="Abogados inmobiliarios en Viña del Mar - Lex Realis"
                 width={600}
                 height={400}
                 className="relative rounded-2xl shadow-xl w-full h-64 object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 600px"
               />
             </div>
           </CarouselItem>
@@ -61,11 +63,13 @@ export function AutoCarousel() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform -rotate-2"></div>
               <Image
-                src="/tribunales civiles chile.jpg"
+                src="/optimized/tribunales civiles chile.webp"
                 alt="Tribunales Civiles de Chile - Lex Realis"
                 width={600}
                 height={400}
                 className="relative rounded-2xl shadow-xl w-full h-64 object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 600px"
               />
             </div>
           </CarouselItem>
@@ -75,11 +79,13 @@ export function AutoCarousel() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent rounded-3xl transform rotate-2"></div>
               <Image
-                src="/abogados administración legal.jpg"
+                src="/optimized/abogados administración legal.webp"
                 alt="Abogados especializados en administración legal - Lex Realis"
                 width={600}
                 height={400}
                 className="relative rounded-2xl shadow-xl w-full h-64 object-cover"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 600px"
               />
             </div>
           </CarouselItem>
