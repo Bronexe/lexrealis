@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Página principal -->
   <url>
-    <loc>lexrealis.cl/</loc>
+    <loc>https://lexrealis.cl/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,35 +10,35 @@
 
   <!-- Páginas principales -->
   <url>
-    <loc>lexrealis.cl/nosotros</loc>
+    <loc>https://lexrealis.cl/nosotros</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/contacto</loc>
+    <loc>https://lexrealis.cl/contacto</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/agendar</loc>
+    <loc>https://lexrealis.cl/agendar</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/administradores</loc>
+    <loc>https://lexrealis.cl/administradores</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/corredores-agentes</loc>
+    <loc>https://lexrealis.cl/corredores-agentes</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -46,7 +46,7 @@
 
   <!-- Blog -->
   <url>
-    <loc>lexrealis.cl/blog</loc>
+    <loc>https://lexrealis.cl/blog</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -54,28 +54,28 @@
 
   <!-- Artículos del blog -->
   <url>
-    <loc>lexrealis.cl/blog/reclamacion-administrador-condominio-chile-2025</loc>
+    <loc>https://lexrealis.cl/blog/reclamacion-administrador-condominio-chile-2025</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/blog/asambleas-copropietarios-quorums-ley-21442</loc>
+    <loc>https://lexrealis.cl/blog/asambleas-copropietarios-quorums-ley-21442</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/blog/cobro-gastos-comunes-chile-2025</loc>
+    <loc>https://lexrealis.cl/blog/cobro-gastos-comunes-chile-2025</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/blog/guia-administrador-condominios-chile</loc>
+    <loc>https://lexrealis.cl/blog/guia-administrador-condominios-chile</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -83,14 +83,14 @@
 
   <!-- Páginas legales -->
   <url>
-    <loc>lexrealis.cl/legal/terminos</loc>
+    <loc>https://lexrealis.cl/legal/terminos</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>lexrealis.cl/legal/privacidad</loc>
+    <loc>https://lexrealis.cl/legal/privacidad</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

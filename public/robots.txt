@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: lexrealis.cl/sitemap.xml
+Sitemap: https://lexrealis.cl/sitemap.xml
 
 # Permitir acceso a recursos estáticos
 Allow: /optimized/
