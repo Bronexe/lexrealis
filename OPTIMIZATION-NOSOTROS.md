@@ -261,3 +261,6 @@ npm run optimize
 2. **Implementar CDN** para distribución global
 3. **Aplicar optimizaciones** a otras páginas
 4. **Considerar WebP AVIF** para mayor compresión
+
+
+

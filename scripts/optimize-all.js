@@ -33,3 +33,6 @@ try {
   console.error('❌ Error durante la optimización:', error.message);
   process.exit(1);
 }
+
+
+

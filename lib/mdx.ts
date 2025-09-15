@@ -48,7 +48,7 @@ export function getBlogPosts(): BlogPost[] {
     })
 
   // Ordenar por fecha (más reciente primero)
-  return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return allPostsData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
 export function getBlogPost(slug: string): BlogPost | null {

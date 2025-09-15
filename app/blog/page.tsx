@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { FileText, Clock, User, Search, Filter, ArrowRight, Download, BookOpen } from "lucide-react"
+import { Clock, User, Search, Filter } from "lucide-react"
 import { getBlogPosts, getAllCategories, getAllTags } from "@/lib/mdx"
 import BlogCards from "@/components/ui/blog-cards"
 
@@ -93,130 +93,15 @@ export default function BlogPage() {
       <section className="py-16">
         <div className="container">
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-8">Todos los artículos</h3>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {regularPosts.map((post) => (
-                <Card key={post.slug} className="hover:shadow-md transition-shadow">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start justify-between mb-3">
-                      <div className="flex gap-2">
-                        <Badge variant="secondary" className="text-xs">
-                          {post.category}
-                        </Badge>
-                        <Badge variant="outline" className="text-xs">
-                          {post.readTime}
-                        </Badge>
-                      </div>
-                    </div>
-                    <CardTitle className="text-lg leading-tight">
-                      <Link href={`/blog/${post.slug}`} className="hover:text-primary transition-colors">
-                        {post.title}
-                      </Link>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    <p className="text-sm text-muted-foreground line-clamp-2">{post.description}</p>
-
-                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                      <div className="flex items-center gap-1">
-                        <Clock className="h-3 w-3" />
-                        {post.readTime}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <User className="h-3 w-3" />
-                        {post.author}
-                      </div>
-                    </div>
-
-                    <Button asChild variant="outline" size="sm" className="w-full bg-transparent">
-                      <Link href={`/blog/${post.slug}`}>Leer más</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <h3 className="text-2xl font-bold mb-4">Todos los artículos</h3>
+            <p className="text-muted-foreground mb-8">
+              Artículos ordenados por fecha de publicación, del más reciente al más antiguo.
+            </p>
+            <BlogCards posts={regularPosts} />
           </div>
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="py-16 md:py-24 bg-primary/5">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Mantente actualizado</h2>
-              <p className="text-xl text-muted-foreground">
-                Recibe los últimos artículos legales y actualizaciones normativas directamente en tu email.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input placeholder="Tu email" className="flex-1" />
-              <Button className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
-                Suscribirse
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <div className="grid gap-8 lg:grid-cols-2 items-center">
-              <div className="space-y-6">
-                <div className="space-y-4">
-                  <h2 className="text-3xl font-bold tracking-tight">Descarga nuestro kit de artículos</h2>
-                  <p className="text-xl text-muted-foreground">
-                    Accede a todas nuestras plantillas, checklists y guías en un solo paquete descargable.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-[#BF7F11]/10 rounded-lg">
-                      <FileText className="h-5 w-5 text-[#BF7F11]" />
-                    </div>
-                    <span className="text-sm">Plantillas legales actualizadas</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-[#BF7F11]/10 rounded-lg">
-                      <BookOpen className="h-5 w-5 text-[#BF7F11]" />
-                    </div>
-                    <span className="text-sm">Guías especializadas por sector</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-[#BF7F11]/10 rounded-lg">
-                      <Download className="h-5 w-5 text-[#BF7F11]" />
-                    </div>
-                    <span className="text-sm">Acceso inmediato y gratuito</span>
-                  </div>
-                </div>
-
-                <Button size="lg" className="bg-[#BF7F11] hover:bg-[#BF7F11]/90">
-                  <Download className="mr-2 h-4 w-4" />
-                  Descargar Kit Completo
-                </Button>
-              </div>
-
-              <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-[#BF7F11]/10 to-[#BF7F11]/5 rounded-2xl flex items-center justify-center">
-                  <div className="text-center space-y-4">
-                    <div className="p-4 bg-white rounded-full w-20 h-20 mx-auto flex items-center justify-center shadow-lg">
-                      <Download className="h-8 w-8 text-[#BF7F11]" />
-                    </div>
-                    <div className="space-y-2">
-                      <h3 className="font-semibold">Kit Legal Completo</h3>
-                      <p className="text-sm text-muted-foreground">PDF • 2.3 MB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

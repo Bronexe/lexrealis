@@ -3,7 +3,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { LeadBanner } from "@/components/lead-banner"
 import ProcessTimeline from "@/components/ui/process-timeline"
 import {
   Building2,
@@ -295,12 +294,6 @@ export default function AdministradoresPage() {
       {/* Process Timeline Section */}
       <ProcessTimeline />
 
-      {/* Lead Banner */}
-      <section className="py-16">
-        <div className="container">
-          <LeadBanner />
-        </div>
-      </section>
 
       {/* Benefits Section */}
       <section className="py-16 md:py-24 bg-[#BF7F11]/5">

@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: lexrealis.cl/sitemap.xml
+
+# Permitir acceso a recursos estáticos
+Allow: /optimized/
+Allow: /favicon.ico
+Allow: /Logo-Lex-Realis.png
+
+# Deshabilitar acceso a archivos de configuración y desarrollo
+Disallow: /scripts/
+Disallow: /types/
+Disallow: /hooks/
+Disallow: /lib/
+Disallow: /styles/
+Disallow: /content/
+Disallow: /components/
+Disallow: /tsconfig.json
+Disallow: /next.config.mjs
+Disallow: /postcss.config.mjs
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /pnpm-lock.yaml
+Disallow: /README.md
+Disallow: /OPTIMIZATION.md
+Disallow: /OPTIMIZATION-NOSOTROS.md
+Disallow: /components.json
+

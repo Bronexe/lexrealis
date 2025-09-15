@@ -12,13 +12,14 @@ import { useMDXComponents } from '@/components/mdx-components'
 import { BlogTOC } from "@/components/ui/blog-toc"
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = getBlogPost(params.slug)
+  const { slug } = await params
+  const post = getBlogPost(slug)
 
   if (!post) {
     return {
@@ -47,8 +48,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getBlogPost(params.slug)
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params
+  const post = getBlogPost(slug)
   
   if (!post) {
     notFound()

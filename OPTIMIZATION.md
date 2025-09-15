@@ -187,3 +187,6 @@ const nextConfig = {
 - Considerar el impacto en SEO (Core Web Vitals)
 - Mantener backups antes de ejecutar optimizaciones masivas
 
+
+
+
